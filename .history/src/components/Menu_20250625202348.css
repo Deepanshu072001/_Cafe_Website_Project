@@ -13,7 +13,7 @@
 
 .menu-card {
   width: 240px;
-  background-color:rgb(223, 195, 122);
+  background-color:goldenrod;
   padding: 1rem;
   border-radius: 10px;
   animation: fadeInScale 1s ease forwards;
