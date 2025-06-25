@@ -25,6 +25,12 @@
   min-width: 280px;
 }
 
+.intro {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
 .about-content h1,
 .about-content h2 {
   font-family: 'Segoe UI', sans-serif;
@@ -45,7 +51,7 @@
 
 .about-content .intro {
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 18px;
   color: #333;
 }
 
