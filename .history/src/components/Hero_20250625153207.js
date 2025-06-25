@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="hero-overlay">
           <h1>Welcome to Mugly Cafe</h1>
           <p>Your Favourite Hangout Place</p>
-          {/*<a href="#menu" className="hero-btn">Order Now</a>*/}
+          <a href="#menu" className="hero-btn">Order Now</a>
         </div>
       </div>
     </div>

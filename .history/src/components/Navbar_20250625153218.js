@@ -12,9 +12,7 @@ const Navbar = () => {
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
-        setMenuOpen(false); 
-        window.history.replaceState(null, '', '/'); 
-
+        setMenuOpen(false); // close menu on link click (mobile)
       }
     }, 50);
   };

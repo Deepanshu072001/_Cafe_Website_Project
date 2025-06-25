@@ -17,7 +17,7 @@ const Hero = () => {
       setCurrentSlide(prev =>
         prev === images.length - 1 ? 0 : prev + 1
       );
-    }, 4000);
+    }, 3000); // time duration in seconds for each slide to change the image
 
     return () => clearInterval(interval);
   }, []);
@@ -33,8 +33,7 @@ const Hero = () => {
       >
         <div className="hero-overlay">
           <h1>Welcome to Mugly Cafe</h1>
-          <p>Your Favourite Hangout Place</p>
-          {/*<a href="#menu" className="hero-btn">Order Now</a>*/}
+          <p>Your Favourite hangout place!</p>
         </div>
       </div>
     </div>
