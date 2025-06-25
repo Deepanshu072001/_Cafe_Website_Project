@@ -1,0 +1,41 @@
+.menu-section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.menu-items {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.menu-card {
+  width: 200px;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.menu-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.menu-card {
+  animation: fadeInScale 1s ease forwards;
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
