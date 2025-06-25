@@ -1,6 +1,6 @@
 .contact-section {
   padding: 40px 20px;
-  background-color: rgb(235, 224, 162);
+  background-color: #655c5c90;
   text-align: center;
   font-size: 1.5rem;
 }
@@ -26,7 +26,7 @@
 .contact-form button {
   padding: 10px;
   background-color: #ae1c28;
-  color: white;
+  color: rgb(20, 19, 19);
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -39,7 +39,7 @@
 .contact-info {
   margin-top: 30px;
   font-size: 1.2rem;
-  color: rgb(16, 5, 5);
+  color: #555;
 }
 
 /* Responsive Contact */
