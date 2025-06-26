@@ -23,14 +23,7 @@ const Menu = () => {
           <img src="/assets/coffee.png" alt="Coffee" />
           <p>Latte</p>
           </div>
-        <div className="menu-card">
-          <img src="/assets/gallery/food.png" alt="Food" />
-          <p>Gallery</p>
-          </div>
-        <div className="menu-card">
-          <img src='/assets/gallery/interior 1.jpg' alt="Interior" />
-          <p>Interior</p>
-          </div>
+          
       </div>
     </div>
   );

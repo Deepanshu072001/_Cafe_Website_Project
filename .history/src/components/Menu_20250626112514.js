@@ -25,11 +25,8 @@ const Menu = () => {
           </div>
         <div className="menu-card">
           <img src="/assets/gallery/food.png" alt="Food" />
-          <p>Gallery</p>
-          </div>
-        <div className="menu-card">
           <img src='/assets/gallery/interior 1.jpg' alt="Interior" />
-          <p>Interior</p>
+          <p>Gallery</p>
           </div>
       </div>
     </div>
