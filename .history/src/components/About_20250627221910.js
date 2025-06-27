@@ -16,7 +16,7 @@ function About() {
           </p>
           <h2><FaCoffee /> A Cozy Place for Coffee Lovers</h2>
           <p>
-            Welcome to Mugly Café, your cozy escape from the everyday rush. We're more than just a coffee shop — we're a community space where rich aromas, handcrafted drinks, and warm smiles come together <i className="bi bi-heart-fill" style={{ color: "red" }}></i>.
+            Welcome to Mugly Café, your cozy escape from the everyday rush. We're more than just a coffee shop — we're a community space where rich aromas, handcrafted drinks, and warm smiles come together.
           </p>
           <p>
             From perfectly brewed espressos to indulgent desserts, every item on our menu is made with love and quality ingredients.

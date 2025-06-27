@@ -1,5 +1,5 @@
 import React from 'react';
-import './Gallery.css'; // Gallery styles are in App.css
+import './App.css'; // Gallery styles are in App.css
 
 function Gallery() {
   return (

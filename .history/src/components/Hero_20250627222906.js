@@ -36,7 +36,7 @@ const Hero = () => {
           <h1>Welcome to Mugly Cafe</h1>
           <p>Your Favourite Hangout Place</p>
           <a href="#about" className="hero-button">
-            About US <i className="bi bi-arrow-right-circle"></i>
+            LAbout US <i className="bi bi-arrow-right-circle"></i>
           </a>
         </div>
       </div>

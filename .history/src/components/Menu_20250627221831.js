@@ -4,7 +4,7 @@ import './Menu.css';
 const Menu = () => {
   return (
     <section id="menu" className="menu-section">
-      <h2 className="section-title"> <i className="bi bi-cup-straw"></i> Our Specialties</h2>
+      <h2 className="section-title">Our Specialties</h2>
       <div className="menu-grid">
         <div className="menu-list">
           <img src="/assets/coffee.png" alt="Espresso" />

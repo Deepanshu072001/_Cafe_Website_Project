@@ -21,9 +21,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar" data-aos="fade-down">
-      <div className="logo">
-        <i className="bi bi-cup-hot"></i> Mugly Cafe
-      </div>
+      <div className="logo">Mugly Cafe</div>
       <div className={`nav-toggle ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
         <div className="bar"></div>
         <div className="bar"></div>

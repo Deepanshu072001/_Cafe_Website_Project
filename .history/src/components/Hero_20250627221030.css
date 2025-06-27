@@ -1,20 +1,17 @@
 .hero-section {
-  position: relative;
-  height: 90vh;
-  overflow: hidden;
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
   text-align: center;
-  padding: 1rem;
+  color: white;
+  border-radius: 10px;
 }
 
 .hero-title {
@@ -54,6 +51,8 @@
   height: 100%;
   background-size: cover;
   background-position: center;
+  flex-shrink: 0;
+  position: relative;
 }
 
 .hero-overlay {
@@ -75,25 +74,27 @@
 .hero-overlay h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .hero-overlay p {
   font-size: 1.3rem;
+  animation: fadeInUp 1.5s ease-out forwards;
   margin-bottom: 1.5rem;
 }
 
-.hero-button {
-  background: #b88956;
+.hero-btn {
+  background-color: #b88956;
   color: white;
   padding: 0.8rem 1.5rem;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.hero-button:hover {
-  background: #a67845;
+.hero-btn:hover {
+  background-color: #a67845;
 }
 
 @keyframes fadeInUp {
@@ -115,5 +116,10 @@
 
   .hero-overlay p {
     font-size: 1rem;
+  }
+
+  .hero-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 }
