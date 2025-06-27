@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="contact-info" data-aos="zoom-in">
         <p><i className="bi bi-envelope-fill"></i> contact@muglycafe.com</p>
         <p><i className="bi bi-telephone-fill"></i> +91 0000000020</p>
-        <p><i className="bi bi-geo-alt-fill"></i> 123 Cafe Street, City name, Country</p>
+        <p><i className="bi bi-geo-alt-fill"></i> 123 Cafe Street, Cityname, Country</p>
       </div>
 
       <div className="map-container" data-aos="fade-up">
