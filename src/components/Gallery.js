@@ -9,6 +9,7 @@ function Gallery() {
         <img src="/images/coffee.jpg" alt="Coffee" />
         <img src="/images/coffee2.png" alt="Espresso" />
         <img src="/images/coffee3.png" alt="Latte" />
+        <img src="/assets/gallery/interior2.png" alt="Interior" />
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ const Hero = () => {
       setCurrentSlide(prev =>
         prev === images.length - 1 ? 0 : prev + 1
       );
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
