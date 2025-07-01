@@ -9,8 +9,6 @@ function Gallery() {
         <img src="/images/coffee.jpg" alt="Coffee" />
         <img src="/images/coffee2.png" alt="Espresso" />
         <img src="/images/coffee3.png" alt="Latte" />
-        </div>
-        <div className='gallery-grid'>
         <p> Interior
         <img src="/images/interior2.png" alt="Interior" /> </p>
       </div>
