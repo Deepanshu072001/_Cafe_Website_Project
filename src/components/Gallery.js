@@ -13,7 +13,14 @@ function Gallery() {
         <img src="/images/interior4.png" alt="Interior" />
         <img src="/images/Exterior.png" alt="Exterior" />
         <img src="/images/exterior1.png" alt="Exterior" />
-        
+         {/* Video inside the gallery */}
+        <video
+          src="/images/video.mp4" 
+          autoPlay 
+          loop 
+          controls 
+          className="gallery-item"
+        />
       </div>
     </section>
   );

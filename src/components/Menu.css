@@ -1,5 +1,6 @@
+
 .menu-section {
-  background: #fffdf8;
+  background-color: thistle;
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -10,10 +11,11 @@
   gap: 2rem;
   margin-top: 2rem;
   justify-content: center;
+  background-color:lightcyan;
 }
 
 .menu-list {
-  background: white;
+  background-color:brown;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -33,7 +35,7 @@
 }
 
 .menu-list p {
-  color: #b88956;
+  color: white;
   font-size: 1.2rem;
   font-weight: bold;
 }

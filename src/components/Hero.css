@@ -76,13 +76,15 @@
 }
 
 .hero-overlay h1 {
-  color: chocolate;
+  color:white;
   font-size: 3rem;
-  background-image: text;
   margin-bottom: 1rem;
 }
 
 .hero-overlay p {
+  background-color: white;
+  color: cornflowerblue;
+  color-scheme: light dark;
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
 }

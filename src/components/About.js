@@ -27,7 +27,7 @@ function About() {
         </div>
 
         <div className="about-image" data-aos="fade-left">
-          <img src="/assets/cafe-interior.png" alt="Mugly Cafe Interior" />
+          <img src="/images/exterior1.png" alt="Mugly Cafe Exterior" />
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 .about-section {
-  background: #fff;
+  background-color: burlywood;
   padding: 4rem 2rem;
 }
 
@@ -16,7 +16,7 @@
 .about-content {
   flex: 1;
   min-width: 280px;
-  color: #333;
+  color:black;
 }
 
 .about-content h2 {
@@ -38,10 +38,11 @@
 }
 
 .about-image img {
-  max-width: 400px;
-  width: 100%;
+  max-width: 500px;
+  width: 450px;
+  height:fit-content;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(177, 52, 52, 0.1);
 }
 
 @media (max-width: 768px) {

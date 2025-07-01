@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './Hero.css';
 
 const images = [
-  '/assets/muglycafe.png',
+  '/images/interior1.png',
   '/assets/burger.png',
   '/assets/drinks.png',
+  '/images/interior2.png',
   '/assets/coffee.png',
   '/assets/coffee3.png',
   '/assets/coffee4.png',
