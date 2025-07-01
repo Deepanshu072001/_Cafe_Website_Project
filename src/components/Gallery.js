@@ -6,13 +6,14 @@ function Gallery() {
     <section id="gallery" className="gallery">
       <h2 className="section-title">Gallery</h2>
       <div className="gallery-grid">
-        <img src="/images/coffee.jpg" alt="Coffee" />
-        <img src="/images/coffee2.png" alt="Espresso" />
-        <img src="/images/coffee3.png" alt="Latte" />
-        </div>
-        <div className='gallery-grid'>
-        <p> Interior
-        <img src="/images/interior2.png" alt="Interior" /> </p>
+        <img src="/images/_interior_.png" alt="Interior" />
+        <img src='/images/interior1.png' alt="Interior" />
+        <img src="/images/interior2.png" alt="Interior" /> 
+        <img src="/images/interior3.png" alt="Interior" />
+        <img src="/images/interior4.png" alt="Interior" />
+        <img src="/images/Exterior.png" alt="Exterior" />
+        <img src="/images/exterior1.png" alt="Exterior" />
+        
       </div>
     </section>
   );
