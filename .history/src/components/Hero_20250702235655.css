@@ -133,9 +133,10 @@
 
 
 /* ===== OPEN HOURS SECTION ===== */
-/* ===== OPEN HOURS SECTION ===== */
+/* ===== OPEN HOURS SECTION ===== 
 .open-hours {
-  background-color: #c0b39a;
+  background-color: #fef7ec;
+  background-image: url('/assets/coffee-watermark.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 180px;
@@ -143,7 +144,7 @@
   text-align: center;
   position: relative;
 }
-
+*/
 
 .open-title {
   font-size: 2rem;

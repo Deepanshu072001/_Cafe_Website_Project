@@ -53,9 +53,9 @@ const Hero = () => {
       <section className="open-hours">
         <h2 className="open-title">🕐 Open Hours</h2>
         <div className="hours-grid">
-          <div>Mon – Fri: <strong>10:00 AM – 11:00 PM</strong></div>
-          <div>Saturday: <strong>10:00 AM – 11:00 PM</strong></div>
-          <div>Sunday: <strong>10:30 AM – 11:00 PM</strong></div>
+          <div>Mon – Fri: <strong>8:00 AM – 10:00 PM</strong></div>
+          <div>Saturday: <strong>9:00 AM – 11:00 PM</strong></div>
+          <div>Sunday: <strong>9:00 AM – 9:00 PM</strong></div>
         </div>
       </section>
     </>

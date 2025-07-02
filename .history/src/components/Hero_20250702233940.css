@@ -131,25 +131,31 @@
   }
 }
 
-
-/* ===== OPEN HOURS SECTION ===== */
 /* ===== OPEN HOURS SECTION ===== */
 .open-hours {
-  background-color: #c0b39a;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 180px;
+  background-color: #fef7ec;
   padding: 3rem 1.5rem;
   text-align: center;
-  position: relative;
-}
+  font-family: 'Segoe UI', sans-serif;
 
+  /* ✅ Watermark Styles */
+  background-image: url('/assets/coffee-watermark.png'); /* update the path if needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
+  background-blend-mode: lighten;
+  opacity: 0.98;
+  position: relative;
+  z-index: 1;
+}
 
 .open-title {
   font-size: 2rem;
   color: #b88956;
   margin-bottom: 1.5rem;
   font-weight: 600;
+  position: relative;
+  z-index: 2;
 }
 
 .hours-grid {
@@ -158,6 +164,8 @@
   gap: 1rem;
   font-size: 1.1rem;
   color: #444;
+  position: relative;
+  z-index: 2;
 }
 
 /* Responsive */
@@ -166,5 +174,9 @@
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
+  }
+
+  .open-hours {
+    background-size: 120px;
   }
 }

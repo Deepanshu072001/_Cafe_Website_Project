@@ -50,7 +50,16 @@ const Hero = () => {
       </section>
 
       {/* 🕐 Open Hours Section */}
-      <section className="open-hours">
+      <section
+        className="open-hours"
+        style={{
+          backgroundImage: "url('/assets/coffee-watermark.png')",
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: '180px',
+          backgroundColor: '#fef7ec',
+        }}
+>
         <h2 className="open-title">🕐 Open Hours</h2>
         <div className="hours-grid">
           <div>Mon – Fri: <strong>10:00 AM – 11:00 PM</strong></div>
