@@ -95,6 +95,7 @@ function Gallery() {
       <div className="video-grid">
         {videoItems.map((src, index) => (
           <video
+          loading="lazy"
             key={index}
             src={src}
             autoPlay

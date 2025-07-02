@@ -101,6 +101,7 @@ function Gallery() {
             loop
             muted
             controls
+            preload='none'
             className="gallery-video"
           />
         ))}

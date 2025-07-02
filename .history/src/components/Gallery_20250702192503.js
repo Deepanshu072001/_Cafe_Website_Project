@@ -15,7 +15,9 @@ function Gallery() {
   ];
 
   const videoItems = [
-    '/videos/video.mp4'
+    '/images/video.mp4',
+    // Add more videos if needed
+    // '/images/video2.mp4'
   ];
 
   const openLightbox = (index) => {
