@@ -1,17 +1,18 @@
-/* ======= Logo Link Style ======= */
+/* ======= Navbar Container ======= */
 .logo a {
-  color: #facc15;
+  color: #facc15; /* warm golden yellow (you can customize) */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
 .logo a:hover {
-  color: orange;
+  color: rgb(93, 78, 50);
 }
 
 /* ======= Navbar Container ======= */
 .navbar {
-  background: #111827;
+  background: #111827; /* dark charcoal/navy */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,16 +30,19 @@
   align-items: center;
   gap: 10px;
   font-weight: bold;
+  color: #f3f4f6;
   font-size: 1.8rem;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
 .logo img {
   height: 42px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease-in-out;
 }
+
 .logo:hover img {
   transform: scale(1.05);
 }
@@ -72,7 +76,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #facc15;
+  background-color: #facc15; /* golden */
   transition: width 0.3s ease-in-out;
 }
 
@@ -87,7 +91,7 @@
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
 }
 
-/* Active Style */
+/* Active/Clicked Style */
 .nav-links li a.active {
   color: #ffffff !important;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
@@ -97,18 +101,13 @@
 .nav-toggle {
   display: none;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  padding: 8px;
-  background: transparent;
-  border: none;
-  z-index: 1100;
+  cursor: pointer;
+  gap: 5px;
 }
 
 .bar {
-  width: 22px;
-  height: 2.5px;
+  width: 25px;
+  height: 3px;
   background-color: #ffffff;
   border-radius: 2px;
   transition: all 0.4s ease;
@@ -125,7 +124,7 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ======= Mobile Nav Dropdown ======= */
+/* ======= Mobile Nav ======= */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -133,17 +132,16 @@
 
   .nav-links {
     position: absolute;
-    top: 64px;
-    right: 1rem;
+    top: 70px;
+    right: 20px;
     flex-direction: column;
+    width: 220px;
     background-color: #1f2937;
-    width: 200px;
     padding: 1rem;
     border-radius: 10px;
     display: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     animation: slideDown 0.3s ease-in-out;
-    z-index: 1000;
   }
 
   .nav-links.active {
@@ -151,26 +149,19 @@
   }
 
   .nav-links li {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     text-align: right;
   }
 
   .nav-links li:last-child {
     margin-bottom: 0;
   }
-
-  .nav-links li a {
-    font-size: 1rem;
-    padding: 0.4rem 0;
-    display: block;
-    width: 100%;
-  }
 }
 
 /* Slide animation */
 @keyframes slideDown {
   from {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
     opacity: 0;
   }
   to {
@@ -179,7 +170,7 @@
   }
 }
 
-/* ======= Responsive tweaks ======= */
+/* Responsive tweaks */
 @media (max-width: 992px) {
   .navbar {
     padding: 1rem 1.2rem;
