@@ -5,7 +5,10 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  // StrictMode is commented out to avoid double rendering in development
+   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    </React.StrictMode>
 );

@@ -16,6 +16,7 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate();
 
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide(prev =>
@@ -28,23 +29,23 @@ const Hero = () => {
 
   return (
     <section className="hero-section" id="home">
-      <div className="hero-carousel">
-        <div
-          className="hero-slide"
-          style={{
-            backgroundImage: `url(${images[currentSlide]})`,
-            transition: 'background-image 1s ease-in-out',
-          }}
-        >
-          <div className="hero-overlay">
-            <h1>Welcome to Mugly Cafe</h1>
-            <p>Your Favourite Hangout Place</p>
-            <button className="hero-button" onClick={() => navigate('/about')}>
+    <div className="hero-carousel">
+      <div
+        className="hero-slide"
+        style={{
+          backgroundImage: `url(${images[currentSlide]})`,
+          transition: 'background-image 1s ease-in-out',
+        }}
+      >
+        <div className="hero-overlay">
+          <h1>Welcome to Mugly Cafe</h1>
+          <p>Your Favourite Hangout Place</p>
+            <button className="hero-button" onClick={() => navigate('/about')}> 
               About US <i className="bi bi-arrow-right-circle"></i>
             </button>
-          </div>
         </div>
       </div>
+    </div>
     </section>
   );
 };

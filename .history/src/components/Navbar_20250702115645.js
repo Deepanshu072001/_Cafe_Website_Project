@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar" data-aos="fade-down">
-      <div className="logo" onClick={() => handleScroll('home')} style={{ cursor: 'pointer' }}>
+      <div className="logo">
         <i className="bi bi-cup-hot"></i> Mugly Cafe
       </div>
       <div

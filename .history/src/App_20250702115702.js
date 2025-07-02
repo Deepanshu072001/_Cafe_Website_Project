@@ -8,7 +8,7 @@ import Hero from './components/Hero';
 import Menu from './components/Menu';
 import About from './components/About';
 import Gallery from './components/Gallery';
-import Contact from './components/contact';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -19,12 +19,12 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div id="home"><Hero /></div>
-      <div id="menu"><Menu /></div>
-      <div id="about"><About /></div>
-      <div id="gallery"><Gallery /></div>
-      <div id="contact"><Contact /></div> 
-      <Footer /> 
+      <Hero />
+      <Menu />
+      <About />
+      <Gallery />
+      <Contact />
+      <Footer />
     </div>
   );
 }

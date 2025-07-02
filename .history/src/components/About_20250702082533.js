@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import { FaCoffee, FaUsers } from 'react-icons/fa';
+import { FaCoffee, FaSmile, FaUsers } from 'react-icons/fa';
 
 function About() {
   return (
