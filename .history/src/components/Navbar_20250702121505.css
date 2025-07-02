@@ -1,4 +1,4 @@
-/* ======= Navbar Container ======= */
+/* Sticky Navbar with Shadow */
 .navbar {
   background: #fffdf8;
   display: flex;
@@ -9,10 +9,10 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ======= Logo ======= */
+/* Logo with Hover Animation */
 .logo {
   display: flex;
   align-items: center;
@@ -26,8 +26,6 @@
 
 .logo img {
   height: 42px;
-  width: auto;
-  object-fit: contain;
   transition: transform 0.4s ease-in-out;
 }
 
@@ -35,7 +33,7 @@
   transform: rotate(-5deg) scale(1.08);
 }
 
-/* ======= Nav Links ======= */
+/* Navigation Links */
 .nav-links {
   display: flex;
   list-style: none;
@@ -43,39 +41,46 @@
   transition: all 0.3s ease;
 }
 
-/* ======= Buttons with Glowing Border ======= */
 .nav-links li button {
   background: none;
-  border: 2px solid transparent;
+  border: none;
   font-size: 1rem;
   cursor: pointer;
   color: #333;
   font-weight: 500;
   padding: 0.6rem 1rem;
   border-radius: 6px;
+  transition: all 0.3s ease;
   position: relative;
-  z-index: 1;
-  transition: all 0.4s ease;
-}
-
-.nav-links li button:hover {
-  border-color: #ffd700; /* glowing gold */
-  box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700aa, 0 0 30px #ffd70088;
-  transform: scale(1.05);
-  color: #ae1c28;
+  overflow: hidden;
 }
 
 .nav-links li button::before {
   content: '';
   position: absolute;
-  inset: 0;
-  border-radius: 6px;
-  z-index: -1;
-  background: transparent;
-  transition: all 0.4s ease;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #ae1c28, #ff7b7b);
+  transition: left 0.4s ease-in-out;
+  z-index: 0;
 }
 
-/* ======= Hamburger Menu (Mobile) ======= */
+.nav-links li button:hover::before {
+  left: 0;
+}
+
+.nav-links li button:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.nav-links li button {
+  z-index: 1;
+}
+
+/* Hamburger Menu Button */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -92,18 +97,19 @@
   border-radius: 2px;
 }
 
-/* Hamburger Animation */
 .nav-toggle.open .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .nav-toggle.open .bar:nth-child(2) {
   opacity: 0;
 }
+
 .nav-toggle.open .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ======= Responsive Nav Links ======= */
+/* Mobile Nav */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -119,7 +125,7 @@
     padding: 1rem;
     border-radius: 10px;
     display: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     animation: slideDown 0.3s ease-in-out;
   }
 
@@ -137,7 +143,7 @@
   }
 }
 
-/* Slide-down animation for mobile */
+/* Slide Down Animation */
 @keyframes slideDown {
   from {
     transform: translateY(-20px);
