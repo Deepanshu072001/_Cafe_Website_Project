@@ -1,6 +1,6 @@
 /* ======= Navbar Container ======= */
 .navbar {
-  background: #111827; /* dark charcoal/navy */
+  background: #1f1f1f;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,8 +8,8 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: 'Georgia', serif;
 }
 
 /* ======= Logo ======= */
@@ -44,16 +44,12 @@
 
 /* ======= Clean Flat Buttons ======= */
 .nav-links li button {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  color: #d1d5db; /* neutral-light */
+  font-size: 1.1rem;
+  color: #eee;
   font-weight: 500;
-  cursor: pointer;
-  padding: 0.5rem 0;
-  position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
 
 .nav-links li button::after {
   content: '';
@@ -71,7 +67,10 @@
   width: 100%;
 }
 
-.nav-links li button:hover,
+.nav-links li button:hover {
+  color: #facc15;
+  transform: scale(1.05);
+}
 .nav-links li button.active {
   color: #facc15; /* golden on hover/active */
 }

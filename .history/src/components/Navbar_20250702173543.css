@@ -1,0 +1,24 @@
+.navbar {
+  background: #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: 'Georgia', serif;
+}
+
+.nav-links li button {
+  font-size: 1.1rem;
+  color: #eee;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li button:hover {
+  color: #facc15;
+  transform: scale(1.05);
+}

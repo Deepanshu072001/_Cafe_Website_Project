@@ -1,34 +1,35 @@
-/* ======= Navbar Container ======= */
+/* ======= Navbar Container (Pinterest Style) ======= */
 .navbar {
-  background: #111827; /* dark charcoal/navy */
+  background: #f8f7f4; /* soft cream background */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  border-bottom: 1px solid #eae7df;
   transition: all 0.3s ease-in-out;
+  font-family: sans-serif;
 }
 
-/* ======= Logo ======= */
+/* ======= Logo Styling ======= */
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: bold;
-  color: #f3f4f6; /* light gray */
-  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3b3b3b; /* elegant dark gray */
+  font-size: 1.7rem;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .logo img {
-  height: 42px;
+  height: 40px;
   width: auto;
   object-fit: contain;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .logo:hover img {
@@ -38,20 +39,20 @@
 /* ======= Nav Links ======= */
 .nav-links {
   display: flex;
+  gap: 2rem;
   list-style: none;
-  gap: 1.5rem;
 }
 
-/* ======= Clean Flat Buttons ======= */
+/* ======= Flat Buttons with Coffee Accent Hover ======= */
 .nav-links li button {
   background: none;
   border: none;
   font-size: 1rem;
-  color: #d1d5db; /* neutral-light */
-  font-weight: 500;
+  color: #3b3b3b;
   cursor: pointer;
-  padding: 0.5rem 0;
+  font-weight: 500;
   position: relative;
+  padding: 0.5rem 0;
   transition: color 0.3s ease;
 }
 
@@ -62,7 +63,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #facc15; /* golden-yellow */
+  background-color: #a47148; /* coffee brown */
   transition: width 0.3s ease-in-out;
 }
 
@@ -73,26 +74,25 @@
 
 .nav-links li button:hover,
 .nav-links li button.active {
-  color: #facc15; /* golden on hover/active */
+  color: #a47148;
 }
 
 /* ======= Hamburger Menu (Mobile) ======= */
 .nav-toggle {
   display: none;
   flex-direction: column;
+  gap: 4px;
   cursor: pointer;
-  gap: 5px;
 }
 
 .bar {
   width: 25px;
   height: 3px;
-  background-color: #222428;
+  background-color: #3b3b3b;
   border-radius: 2px;
   transition: all 0.4s ease;
 }
 
-/* Hamburger open animation */
 .nav-toggle.open .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -103,7 +103,7 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ======= Mobile Nav ======= */
+/* ======= Mobile Responsive Dropdown ======= */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -114,12 +114,12 @@
     top: 70px;
     right: 20px;
     flex-direction: column;
+    background-color: #f8f7f4;
     width: 220px;
-    background-color: #1f2937; /* slightly lighter than navbar */
     padding: 1rem;
     border-radius: 10px;
     display: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     animation: slideDown 0.3s ease-in-out;
   }
 
@@ -137,7 +137,7 @@
   }
 }
 
-/* Slide animation */
+/* Slide-down animation */
 @keyframes slideDown {
   from {
     transform: translateY(-20px);

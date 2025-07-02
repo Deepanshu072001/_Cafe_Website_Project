@@ -32,7 +32,10 @@ const Navbar = () => {
         <li><button onClick={() => handleScroll('gallery')}>Gallery</button></li>
         <li><button onClick={() => handleScroll('contact')}>Contact</button></li>
       </ul>
-      
+      <a href="/gallery" target="_blank" rel="noopener noreferrer">Gallery</a>
+<a href="/menu" target="_blank" rel="noopener noreferrer">Menu</a>
+<a href="/about" target="_blank" rel="noopener noreferrer">About</a>
+
     </nav>
   );
 };

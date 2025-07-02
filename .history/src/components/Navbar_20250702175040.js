@@ -32,7 +32,6 @@ const Navbar = () => {
         <li><button onClick={() => handleScroll('gallery')}>Gallery</button></li>
         <li><button onClick={() => handleScroll('contact')}>Contact</button></li>
       </ul>
-      
     </nav>
   );
 };

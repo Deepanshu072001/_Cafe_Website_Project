@@ -27,12 +27,11 @@ const Navbar = () => {
       </div>
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
         <li><button onClick={() => handleScroll('home')}>Home</button></li>
-        <li><button onClick={() => handleScroll('menu')}>Menu</button></li>
-        <li><button onClick={() => handleScroll('about')}>About</button></li>
-        <li><button onClick={() => handleScroll('gallery')}>Gallery</button></li>
+       <a href="/gallery" target="_blank" rel="noopener noreferrer">Gallery</a>
+       <a href="/menu" target="_blank" rel="noopener noreferrer">Menu</a>
+       <a href="/about" target="_blank" rel="noopener noreferrer">About</a>
         <li><button onClick={() => handleScroll('contact')}>Contact</button></li>
       </ul>
-      
     </nav>
   );
 };
