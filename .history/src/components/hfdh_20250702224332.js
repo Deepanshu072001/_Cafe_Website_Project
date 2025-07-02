@@ -16,11 +16,15 @@
 
 /* ===== SLIDE IMAGE BACKGROUND ===== */
 .hero-slide {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   transition: background-image 1s ease-in-out;
 }
@@ -42,11 +46,13 @@
 
 /* ===== HEADINGS AND BUTTONS ===== */
 .hero-overlay h1 {
+  color: white;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .hero-overlay p {
+  color: white;
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
 }
@@ -64,7 +70,7 @@
 
 .hero-button:hover {
   background: #a67845;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* ===== ANIMATION ===== */
@@ -86,8 +92,9 @@
     min-height: 420px;
   }
 
+  .hero-carousel,
   .hero-slide {
-    background-position: center top;
+    height: 100%;
   }
 
   .hero-overlay h1 {
@@ -107,7 +114,7 @@
 @media (max-width: 480px) {
   .hero-section {
     height: 65vh;
-    min-height: 360px;
+    min-height: 380px;
   }
 
   .hero-overlay h1 {
