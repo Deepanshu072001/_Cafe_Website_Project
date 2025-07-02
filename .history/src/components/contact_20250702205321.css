@@ -23,7 +23,7 @@
   border: none;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
   .contact-section {
     padding: 3rem 1rem;

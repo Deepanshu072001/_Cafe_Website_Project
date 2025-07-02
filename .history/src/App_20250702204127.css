@@ -12,7 +12,7 @@ html {
 
 /* Body base */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #fffdf8;
   color: #333;
   line-height: 1.6;
