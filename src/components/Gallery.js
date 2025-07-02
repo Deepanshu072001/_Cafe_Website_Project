@@ -1,8 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import './Gallery.css';
 
 function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [videoModalSrc, setVideoModalSrc] = useState(null);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
 
   const galleryItems = [
     '/images/_interior_.png',
@@ -15,15 +18,32 @@ function Gallery() {
   ];
 
   const videoItems = [
-    '/videos/video.mp4'
+    '/videos/video.mp4',
+    '/videos/video1.mp4'
   ];
 
   const openLightbox = (index) => {
     setLightboxIndex(index);
+    window.history.pushState({ modal: 'image' }, '');
   };
 
   const closeLightbox = () => {
     setLightboxIndex(null);
+    if (window.history.state?.modal) {
+      window.history.back();
+    }
+  };
+
+  const openVideoModal = (src) => {
+    setVideoModalSrc(src);
+    window.history.pushState({ modal: 'video' }, '');
+  };
+
+  const closeVideoModal = () => {
+    setVideoModalSrc(null);
+    if (window.history.state?.modal) {
+      window.history.back();
+    }
   };
 
   const nextImage = useCallback(() => {
@@ -41,10 +61,49 @@ function Gallery() {
         if (e.key === 'ArrowRight') nextImage();
         if (e.key === 'ArrowLeft') prevImage();
       }
+      if (videoModalSrc && e.key === 'Escape') {
+        closeVideoModal();
+      }
     };
+
+    const handlePopState = () => {
+      if (lightboxIndex !== null) closeLightbox();
+      if (videoModalSrc) closeVideoModal();
+    };
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxIndex, nextImage, prevImage]);
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [lightboxIndex, videoModalSrc, nextImage, prevImage]);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const deltaX = touchStartX.current - touchEndX.current;
+    if (Math.abs(deltaX) > 50) {
+      if (deltaX > 0) {
+        // swipe left
+        if (lightboxIndex !== null) nextImage();
+        if (videoModalSrc) closeVideoModal();
+      } else {
+        // swipe right
+        if (lightboxIndex !== null) prevImage();
+        if (videoModalSrc) closeVideoModal();
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
 
   return (
     <section id="gallery" className="gallery">
@@ -61,7 +120,13 @@ function Gallery() {
       </div>
 
       {lightboxIndex !== null && (
-        <div className="lightbox" onClick={closeLightbox}>
+        <div
+          className="lightbox"
+          onClick={closeLightbox}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <span className="lightbox-close" onClick={closeLightbox}>
             &times;
           </span>
@@ -97,14 +162,35 @@ function Gallery() {
           <video
             key={index}
             src={src}
-            autoPlay
-            loop
-            muted
-            controls
             className="gallery-video"
+            onClick={() => openVideoModal(src)}
+            muted
+            playsInline
+            loop
           />
         ))}
       </div>
+
+      {videoModalSrc && (
+        <div
+          className="video-lightbox"
+          onClick={closeVideoModal}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <span className="lightbox-close" onClick={closeVideoModal}>
+            &times;
+          </span>
+          <video
+            src={videoModalSrc}
+            className="lightbox-video"
+            controls
+            autoPlay
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 }
