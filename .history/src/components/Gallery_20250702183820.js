@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Gallery.css';
 
 function Gallery() {
@@ -22,13 +22,13 @@ function Gallery() {
     setLightboxIndex(null);
   };
 
-  const nextImage = useCallback(() => {
+  const nextImage = () => {
     setLightboxIndex((prev) => (prev + 1) % galleryItems.length);
-  }, [galleryItems.length]);
+  };
 
-  const prevImage = useCallback(() => {
+  const prevImage = () => {
     setLightboxIndex((prev) => (prev - 1 + galleryItems.length) % galleryItems.length);
-  }, [galleryItems.length]);
+  };
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -40,7 +40,7 @@ function Gallery() {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxIndex, nextImage, prevImage]);
+  }, [lightboxIndex]);
 
   return (
     <section id="gallery" className="gallery">
@@ -66,32 +66,14 @@ function Gallery() {
 
       {lightboxIndex !== null && (
         <div className="lightbox" onClick={closeLightbox}>
-          <span className="lightbox-close" onClick={closeLightbox}>
-            &times;
-          </span>
+          <span className="lightbox-close" onClick={closeLightbox}>&times;</span>
           <img
             src={galleryItems[lightboxIndex]}
             alt="Enlarged View"
             onClick={(e) => e.stopPropagation()}
           />
-          <button
-            className="lightbox-prev"
-            onClick={(e) => {
-              e.stopPropagation();
-              prevImage();
-            }}
-          >
-            &#10094;
-          </button>
-          <button
-            className="lightbox-next"
-            onClick={(e) => {
-              e.stopPropagation();
-              nextImage();
-            }}
-          >
-            &#10095;
-          </button>
+          <button className="lightbox-prev" onClick={(e) => { e.stopPropagation(); prevImage(); }}>&#10094;</button>
+          <button className="lightbox-next" onClick={(e) => { e.stopPropagation(); nextImage(); }}>&#10095;</button>
         </div>
       )}
     </section>
