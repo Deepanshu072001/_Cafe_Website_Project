@@ -29,12 +29,12 @@ const Hero = () => {
       {/* Welcome Section */}
       <section className="welcome-section">
         <div className="welcome-content">
-          { /*<button
+          <button
             className="hero-button"
             onClick={() => window.open('/about', '_blank')}
           >
             About Us <i className="bi bi-arrow-right-circle"></i>
-          </button> */}
+          </button>
         </div>
       </section>
 
