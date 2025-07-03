@@ -26,6 +26,18 @@ const Hero = () => {
 
   return (
     <>
+      {/* Hero Banner (image only) */}
+      <section className="hero-section" id="home">
+        <div className="hero-carousel">
+          <div
+            className="hero-slide"
+            style={{
+              backgroundImage: `url(${images[currentSlide]})`,
+            }}
+          ></div>
+        </div>
+      </section>
+
       {/* Welcome Section */}
       <section className="welcome-section">
         <div className="welcome-content">
@@ -39,20 +51,6 @@ const Hero = () => {
           </button>
         </div>
       </section>
-
-
-      {/* Hero Banner (image only) */}
-      <section className="hero-section" id="home">
-        <div className="hero-carousel">
-          <div
-            className="hero-slide"
-            style={{
-              backgroundImage: `url(${images[currentSlide]})`,
-            }}
-          ></div>
-        </div>
-      </section>
-
 
       {/* Open Hours */}
       <section className="open-hours">

@@ -26,35 +26,38 @@ const Hero = () => {
 
   return (
     <>
-      {/* Welcome Section */}
-      <section className="welcome-section">
-        <div className="welcome-content">
-          <h2>Welcome to Mugly Cafe</h2>
-          <p>Your Favourite Hangout Place</p>
-          <button
-            className="hero-button"
-            onClick={() => window.open('/about', '_blank')}
-          >
-            About Us <i className="bi bi-arrow-right-circle"></i>
-          </button>
-        </div>
-      </section>
-
-
-      {/* Hero Banner (image only) */}
       <section className="hero-section" id="home">
         <div className="hero-carousel">
           <div
             className="hero-slide"
             style={{
               backgroundImage: `url(${images[currentSlide]})`,
+              transition: 'background-image 1s ease-in-out',
             }}
-          ></div>
+          >
+            <div className="hero-overlay">
+              <button
+                className="hero-button"
+                onClick={() => window.open('/about', '_blank')}
+              >
+                About Us <i className="bi bi-arrow-right-circle"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
+        {/* Welcome Section */}
+      <section className="welcome-section">
+        <div className="welcome-content">
+          <h2>Welcome to Mugly Cafe</h2>
+          <p>
+            At Mugly Cafe, we blend the aroma of freshly brewed coffee with a cozy ambiance that makes every visit special. Whether you're here for a quick bite or a peaceful evening, we’ve got the perfect cup waiting for you.
+          </p>
+        </div>
+      </section>
 
-      {/* Open Hours */}
+      {/* 🕐 Open Hours Section */}
       <section className="open-hours">
         <h2 className="open-title">🕐 Open Hours</h2>
         <div className="hours-grid">

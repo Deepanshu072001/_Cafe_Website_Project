@@ -4,7 +4,7 @@
   height: 70vh;       /* reduced from 70/90vh */
   min-height: 280px;  /* reduced from 400/500px */
   overflow: hidden;
-  padding-top: 15px; /* space for the carousel controls */
+  padding-top: 10px; /* space for the carousel controls */
   margin-bottom: 1rem;
 }
 

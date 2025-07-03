@@ -4,8 +4,8 @@
   height: 70vh;       /* reduced from 70/90vh */
   min-height: 280px;  /* reduced from 400/500px */
   overflow: hidden;
-  padding-top: 15px; /* space for the carousel controls */
-  margin-bottom: 1rem;
+  padding-top: 20px; /* space for the carousel controls */
+  margin-bottom: 3rem;
 }
 
 .hero-carousel {
@@ -37,7 +37,7 @@
   background-size: cover;          /*  image covers the section */
   background-position: center;     /* Centers the image */
   background-repeat: no-repeat; 
-  margin-top: 0.5rem;   /* Prevents repeating */
+  margin-top: 1rem;   /* Prevents repeating */
   padding: 9rem 8rem;
   text-align:center;
   min-height: 400px;

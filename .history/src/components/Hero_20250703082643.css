@@ -4,8 +4,8 @@
   height: 70vh;       /* reduced from 70/90vh */
   min-height: 280px;  /* reduced from 400/500px */
   overflow: hidden;
-  padding-top: 15px; /* space for the carousel controls */
-  margin-bottom: 1rem;
+  padding-top: 20px; /* space for the carousel controls */
+  margin-bottom: 3rem;
 }
 
 .hero-carousel {
@@ -36,11 +36,10 @@
   background-image: url('../assets/welcome-image.png');
   background-size: cover;          /*  image covers the section */
   background-position: center;     /* Centers the image */
-  background-repeat: no-repeat; 
-  margin-top: 0.5rem;   /* Prevents repeating */
-  padding: 9rem 8rem;
+  background-repeat: no-repeat;    /* Prevents repeating */
+  padding: 6rem 5rem;
   text-align:center;
-  min-height: 400px;
+  min-height: 380px;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -77,7 +76,7 @@
 
 /* ===== OPEN HOURS SECTION ===== */
 .open-hours {
-  background-color: rgb(214, 150, 105);
+  background-color: #7e715e;
   padding: 3rem 1.5rem;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
@@ -85,10 +84,9 @@
 
 .open-title {
   font-size: 2rem;
-  color: #4e463c;
+  color: #b88956;
   margin-bottom: 1.5rem;
   font-weight: 600;
-  font-weight: bolder;
 }
 
 .hours-grid {
