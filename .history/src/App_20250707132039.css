@@ -1,0 +1,292 @@
+/* main.css */
+
+/* Base Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdf8f4;
+  color: #3e2f20;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+.navbar {
+  background-color: #3e2f20;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-links li a.active {
+  border-bottom: 2px solid #ffcb74;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #3e2f20;
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+.hero-section {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.welcome-section {
+  background: #fff8ee;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ============================= */
+/* OPEN HOURS */
+/* ============================= */
+.open-hours {
+  padding: 2rem;
+  background-color: #fff1dd;
+  text-align: center;
+}
+
+.hours-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.open-title {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+/* ============================= */
+/* MENU */
+/* ============================= */
+.menu-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #3e2f20;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu-list {
+  background-color: #fffcf7;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.menu-list:hover {
+  transform: scale(1.05);
+}
+
+.menu-list img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================= */
+/* ABOUT SECTION */
+/* ============================= */
+.about-section {
+  padding: 3rem 1rem;
+  background-color: #fff8ef;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-content {
+  flex: 1 1 400px;
+}
+
+.about-content h2 {
+  margin: 1rem 0;
+}
+
+.about-image {
+  flex: 1 1 400px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ============================= */
+/* GALLERY SECTION */
+/* ============================= */
+.gallery {
+  padding: 3rem 1rem;
+  background-color: #fff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+.lightbox,
+.video-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  flex-direction: column;
+}
+
+.lightbox img,
+.lightbox-video {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.lightbox-close {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* ============================= */
+/* CONTACT SECTION */
+/* ============================= */
+.contact-section {
+  padding: 3rem 1rem;
+  background-color: #fff1e6;
+  text-align: center;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+.map-container {
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+.footer {
+  background-color: #3e2f20;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}

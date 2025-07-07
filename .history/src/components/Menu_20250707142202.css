@@ -1,0 +1,139 @@
+/* Menu.css - Advanced, Responsive, Elegant */
+
+.menu-section {
+  padding: 4rem 2rem 2rem 2rem; /* Top padding maintained, bottom reduced */
+  text-align: center;
+  background: linear-gradient(to bottom, #f5f3f0 0%, #faf8f6 100%);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Heading Styling */
+.menu-section h2 {
+  font-size: 2.5rem;
+  color: #2f2f2f;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.menu-section h2::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 60px;
+  background-color: #c18f59;
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+/* ===== Menu Grid ===== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.2rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Menu Card ===== */
+.menu-list {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-list:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== Image Styling ===== */
+.menu-list img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.menu-list:hover img {
+  transform: scale(1.03);
+}
+
+/* ===== Text Styling ===== */
+.menu-list p {
+  color: #3d3d3d;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .menu-section {
+    padding: 3.5rem 1.5rem 1.5rem;
+  }
+  .menu-section h2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-section {
+    padding: 3rem 1.2rem 1.2rem;
+  }
+
+  .menu-section h2 {
+    font-size: 2rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-list img {
+    height: 200px;
+  }
+
+  .menu-list p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-section {
+    padding: 2.5rem 1rem 1rem;
+  }
+
+  .menu-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .menu-list {
+    padding: 1rem;
+  }
+
+  .menu-list img {
+    height: 180px;
+  }
+
+  .menu-list p {
+    font-size: 0.95rem;
+  }
+}

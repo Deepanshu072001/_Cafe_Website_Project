@@ -1,0 +1,201 @@
+/* ======= Logo Link Style ======= */
+.logo a {
+  color: #facc15;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.logo a:hover {
+  color: orange;
+}
+
+/* ======= Navbar Container ======= */
+.navbar {
+  background: #3d3a3a ;
+  display: block;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ======= Logo ======= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.logo img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+/* ======= Nav Links ======= */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+/* ======= Nav Link Buttons ======= */
+.nav-links li a {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #d1d5db;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Glow underline animation */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #facc15;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* Glow effect and color on hover */
+.nav-links li a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Active Style */
+.nav-links li a.active {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* ======= Hamburger Menu (Mobile) ======= */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  z-index: 1100;
+}
+
+.bar {
+  width: 22px;
+  height: 2.5px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger open animation */
+.nav-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ======= Mobile Nav Dropdown ======= */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 1rem;
+    flex-direction: column;
+    background-color: #1f2937;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    animation: slideDown 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 0.8rem;
+    text-align: right;
+  }
+
+  .nav-links li:last-child {
+    margin-bottom: 0;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+    padding: 0.4rem 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Slide animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ======= Responsive tweaks ======= */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 1rem 1.2rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+}
+

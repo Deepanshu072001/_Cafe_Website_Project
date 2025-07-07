@@ -1,0 +1,149 @@
+/* Menu.css - Advanced Flip Card Design with Vanilla CSS */
+
+.menu-section {
+  padding: 4rem 2rem 2rem 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #f5f3f0 0%, #faf8f6 100%);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.menu-section h2 {
+  font-size: 2.5rem;
+  color: #2f2f2f;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.menu-section h2::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 60px;
+  background-color: #c18f59;
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+/* Grid Layout */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==== FLIP CARD WRAPPER ==== */
+.menu-list {
+  perspective: 1000px;
+  height: 350px;
+}
+
+.menu-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.menu-list:hover .menu-inner {
+  transform: rotateY(180deg);
+}
+
+/* ==== FRONT SIDE ==== */
+.menu-front,
+.menu-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.menu-front {
+  background-color: #ffffff;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.menu-front img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.menu-front p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* ==== BACK SIDE ==== */
+.menu-back {
+  background-color: #3e2f20;
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-back p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f2e8dc;
+  font-weight: 400;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .menu-section {
+    padding: 3rem 1rem 1rem;
+  }
+
+  .menu-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .menu-list {
+    height: 320px;
+  }
+
+  .menu-front img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-section {
+    padding: 2.5rem 1rem 1rem;
+  }
+
+  .menu-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .menu-front img {
+    height: 180px;
+  }
+
+  .menu-back p {
+    font-size: 0.95rem;
+  }
+}
