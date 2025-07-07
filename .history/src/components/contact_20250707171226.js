@@ -11,7 +11,7 @@ const Contact = () => {
       const timer = setTimeout(() => {
         setShowPopup(true);
         sessionStorage.setItem('popupShown', 'true');
-      }, 10000);
+      }, 20000);
       return () => clearTimeout(timer);
     }
   }, []);
